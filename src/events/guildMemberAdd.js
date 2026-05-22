@@ -41,8 +41,9 @@ export default {
 
                 const messageContent = welcomeConfig.welcomePing ? user.toString() : null;
 
+                // WYMUSZENIE PL: Ignorujemy bazę danych dla tytułu, bierzemy tekst z kodu
                 const embedTitle = formatWelcomeMessage(
-                    welcomeConfig.welcomeEmbed?.title || '🤍 Witamy!',
+                    'Witaj {user} w RAYO Studio! 🤍',
                     formatData
                 );
                 
