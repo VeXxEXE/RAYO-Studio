@@ -40,7 +40,7 @@ export default {
                 const messageContent = welcomeConfig.welcomePing ? user.toString() : null;
 
                 const embedTitle = formatWelcomeMessage(
-                    welcomeConfig.welcomeEmbed?.title || '🎉 Welcome!',
+                    welcomeConfig.welcomeEmbed?.title || '🤍 Witamy!',
                     formatData
                 );
                 const embedFooter = welcomeConfig.welcomeEmbed?.footer
@@ -60,8 +60,8 @@ export default {
                         .setDescription(welcomeMessage)
                         .setThumbnail(user.displayAvatarURL())
                         .addFields(
-                            { name: 'User', value: `${user.tag} (${user.id})`, inline: true },
-                            { name: 'Member Count', value: guild.memberCount.toString(), inline: true }
+                            { name: 'Użytkownik', value: `${user.tag} (${user.id})`, inline: true },
+                            { name: 'Jest już nas', value: guild.memberCount.toString(), inline: true }
                         )
                         .setTimestamp()
                         .setFooter({ text: embedFooter });
