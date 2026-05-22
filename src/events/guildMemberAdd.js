@@ -32,8 +32,10 @@ export default {
                 }
 
                 const formatData = { user, guild, member };
+                
+                // WYMUSZENIE PL: Ignorujemy bazę danych dla opisu, bierzemy tekst z kodu
                 const welcomeMessage = formatWelcomeMessage(
-                    welcomeConfig.welcomeMessage || welcomeConfig.welcomeEmbed?.description || 'Welcome {user} to {server}!',
+                    'Wpadłeś w idealne miejsce, żeby wejść na wyższy level! 🚀',
                     formatData
                 );
 
@@ -43,9 +45,9 @@ export default {
                     welcomeConfig.welcomeEmbed?.title || '🤍 Witamy!',
                     formatData
                 );
-                const embedFooter = welcomeConfig.welcomeEmbed?.footer
-                    ? formatWelcomeMessage(welcomeConfig.welcomeEmbed.footer, formatData)
-                    : `${guild.name}©`;
+                
+                // WYMUSZENIE PL: Ignorujemy bazę danych dla stopki, bierzemy sztywno nazwę serwera i ©
+                const embedFooter = `${guild.name} ©`;
 
                 const canEmbed = permissions.has(PermissionFlagsBits.EmbedLinks);
 
@@ -210,6 +212,3 @@ async function assignRoleSafely(member, role) {
         logger.warn(`Failed to assign role ${role.id} to member ${member.id}:`, error);
     }
 }
-
-
-
