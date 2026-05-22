@@ -43,7 +43,7 @@ export default {
 
                 // WYMUSZENIE PL: Ignorujemy bazę danych dla tytułu, bierzemy tekst z kodu
                 const embedTitle = formatWelcomeMessage(
-                    'Witaj {user} w RAYO Studio! 🤍',
+                    'Witaj ${user.tag} w RAYO Studio! 🤍',
                     formatData
                 );
                 
