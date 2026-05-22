@@ -45,7 +45,7 @@ export default {
                 );
                 const embedFooter = welcomeConfig.welcomeEmbed?.footer
                     ? formatWelcomeMessage(welcomeConfig.welcomeEmbed.footer, formatData)
-                    : `Welcome to ${guild.name}!`;
+                    : `${guild.name}©`;
 
                 const canEmbed = permissions.has(PermissionFlagsBits.EmbedLinks);
 
